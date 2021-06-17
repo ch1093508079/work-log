@@ -1,0 +1,489 @@
+---
+layout: post
+title:  "《CCNA-ICDN2》读书笔记"
+date:   2021-06-14 11:25:00 +0800
+categories: book-note
+---
+
+#### 1.3.1 EtherChannel协议
+包含端口聚合协议（PAgP）和链路聚合控制协议（LACP）
+
+##### 链路聚合协议
+PAgP是思科专有协议
+
+在EtherChannel中，所有端口都必须具有相同的速度、双工设置和VLAN信息。信道创建后，任何端口的修改也将改变所有其他信道端口。
+
+表1-4详细描述：打开、期望、自动
+
+##### 链路聚合控制协议
+LACP属于IEEE规范
+
+表1-5详细描述：打开、主动、被动
+
+#### 1.3.2 配置EtherChannel
+
+### 1.4 理解默认网关冗余
+
+## ch02 基本连接故障的排除
+
+### 2.1 排除IPv4基本连接的故障
+
+#### 2.1.1 端到端
+本部分的多个示例中均使用了图2-1中的示例
+
+## ch03 实施EIGRP解决方案
+
+由不同管理部门控制的互连通常采用静态路由
+
+#### 3.1.4 有类与无类
+有类网络环境的局限
++ 在路由更新过程中没有交换子网掩码
++ 需要在所有主网边界自动汇总到有类网络编号
+
+#### 3.1.5 管理距离
+如果路由信息由多个来源，用管理距离值来衡量每个路由信息来源的可信度
+
+|路由来源|默认管理距离|
+|----|----|
+|直连接口|0	|
+|静态路由|1	|
+|...|……|
+
+## ch05 WAN技术
+
+#### 5.1.6 服务提供商分界点
+demarc
+1. T1或E1：如图5-11所示
++ RJ-45插座（又名“饼干”）
++ 智能插座
+服务提供商的责任在分界点结束，物业业主也可以延长分界点
+2. DSL终止：模拟电话服务的典型分界点，如图5-12所示，它使用网络接口插座。
+3. 电缆终端
+电缆终端通过“RG”型同轴电缆完成。建筑物中最常用的级别是RG-6。电缆调制解调器的背面有3个连接头
++ 电源
++ 输入同轴
++ 输出以太网
+4. 其他WAN终端
+DS3/E3通常终止在双芯同轴电缆。
+
+#### 5.1.7 WAN链路选项
+如图5-15所示
+1. 私有WAN连接方案
++ 专用通信链路：在需要建立永久专用连接时，可以使用点对点线路；点对点线路通常向运营商租用，因此也叫租用线路，可以是T1、E1、T3、E3以及光纤传输（如城域以太网）
++ 交换通信链路：交换通信链路可以是电路交换或数据包交换
+	+ 电路交换通信链路：电路交换动态建立专用虚拟连接，以便在发送方和接受方之间进行语音或数据通信。
+	+ 数据包交换通信链路：数据被封装在标记帧、信元或数据包中进行传输。包括
+		+ 帧中继
+		+ ATM
+		+ X.25
+		+ 城域以太网
+		+ MPLS
+2. 公共WAN连接方案：互联网WAN连接链路是通过宽带服务提供的，并且结合VPN技术确保隐私性
+3. 城域网络（MAN）：当组织的地理多样性超越了LAN可以支持的范围时，就轮到MAN上场了。MAN可以使用与WAN相同的接入技术，其他常见的MAN技术有
++ 私有暗光纤
++ 租用的暗光纤
++ 无线技术
++ 城域以太网
+4. 外连网：用于在业务合作伙伴之间进行特殊的安全传输的WAN
+
+#### 5.1.8 配置串行接口
+还要配置CSU/DSU
+
+#### 5.1.9 HDLC协议
+HDLC协议是点对点WAN连接通常使用的两种主要数据链路协议之一。
+
+HDLC定义第2层帧结构，从而通过确认消息、控制字符和校验和来进行流量控制和错误检查。
+
+在同步或异步链路上没有用于标记帧首或帧尾的机制。HDLC使用帧定界符来标记每个帧的开头和结尾。
+
+#### 5.1.10 点对点协议
+PPP具有HDLC所缺乏的特性
++ 厂商互操作性：PPP基于标准，思科的HDLC实施是专有的
++ 身份验证：支持PAP和CHAP
++ 错误检测：LQM检测到过多的错误就关闭链路
++ 第二层连接电路：多链路选项，在第2层实现冗余和带宽的增加
+
+PPP组成部分
++ 用于封装多协议数据报的方法
++ 扩展链路控制协议（LCP）
++ 网络控制协议（NCP）族
+
+### 5.2 使用帧中继建立WAN连接
+
+### 5.3 思科VPN解决方案
+VPN网络有以下两种类型
++ 站点到站点的VPN：它们提供经典WAN服务。设备通过一台VPN设备发送和接收流量
++ 远程接入VPN：它们可以支持远程办公人员、移动用户，以及需要按需接入的其他人的需求。由VPN客户端软件来封装和加密
+Cisco ASA是一个网络安全设备，充当一个VPN断电（集中器）和一个防火墙。支持上述两种类型
+
+#### 5.3.1 IPsec是一个IETF标准，它为用TCP/IP配置VPN定义基础架构。
+#### 5.3.2 通用路由封装（GRE隧道）
+#### 5.3.3 理解MPLS网络
+在图5-56中，一个简化的高层次MPLS基础设施显示了前3种类型的MPLS路由器
++ 客户边缘（Customer Edge, CE）路由器
++ 提供商边缘（Provider Edge, PE）路由器
++ 提供商（P）路由器
++ 提供商网络
++ 客户网络
++ 客户逻辑WAN
++ 附加电路（AC）
+
+MPLS有3种类型的服务
++ 第二层“伪线路”
++ 第二层虚拟专用LAN服务（VPLS）
++ 第三层VPN
+
+以上为检视阅读笔记
+===
+以下为分析阅读笔记
+
+## ch06 网络设备管理
+
+### 6.1 配置网络设备来支持网络管理协议
+SNMP包括
++ 管理器：可以是网络管理系统（NMS）的一部分（如思科主基础设施）
++ 代理：网络设备运行的SNMP进程
++ 管理信息库（MIB）：代理中的一组可在设备中执行的度量和功能
+
+NMS程序化为操作、记录以下数据
++ 轮询：SNMP管理器通常进行定期查询
++ 陷阱：代理也可以将更新发送至服务器
+
+#### 6.1.1 SNMP版本
+
+|SNMP版本|安全性|批量检索机制|
+|----|----|----|
+|SNMPv1  |纯文本身份验证|否|
+|SNMPv2c |纯文本身份验证|是|
+|SNMPv3  |身份验证和加密|是|
+
+#### 6.1.2 从SNMP代理获得数据
+监控和记录设备中关键资源的正常运行可允许建立一个基准线
+
+NMS只提供用户友好型表示法并显示SNMP数据
+##### 监控SNMP中的轮询数据
+应当多久轮训一次设备？取决于
++ 执行的轮询类型
++ 可用性需求
++ NMS的功能
++ 数据采样需求
++ 轮询的度量标准
+
+##### 监控SNMP中的TRAPs
+设备通常会在LAN商重新启动和关闭，但是WAN接口通常在不会起伏不定
+
+大多数SNMP代理设备允许有选择地调整发送出去的陷阱。在配置模式下用`snmp-server enable traps`查询可配置的Cisco IOS陷阱的子集
+##### 向SNMP代理发送数据
+SNMP管理器可以向代理发送一条SET命令来设置几个值，或者**采取某些行动**。例如发送SET来通知路由器向SFTP服务器发送配置。
+
+大多数SNMP代理支持配置读写模式或只读模式。Cisco ASA Firewall只支持SNMP GET和陷阱
+##### SNMP MIBs
+使用snmpget应用程序，可以手动从SNMP代理中获得各种值
+##### 基本的SNMP配置和验证
+```
+#配置模式下
+snmp-server community cisco123 RW
+snmp-server contact Branch-Amherst, NH
+snmp-server location Branch-Office
+
+snmp-server host 192.168.1.200 trap cisco123
+#特权模式下验证
+show running-config | include snmp
+show snmp
+```
+访问控制列表也可用于将SNMP访问权限限制为源IP地址的一个选定组。
+
+#### 6.1.3 Syslog概述
+Syslog是最初设计为UNIX操作系统的一部分的一种协议。它将消息生成和消息存储分离开来。这就允许计算机跨IP网络向下列区域发送时间通知消息
++ 事件消息收集器（syslog服务器）
++ 自己的缓冲存储区
++ 自己的本地存储区
+
+Cisco IOS设备的默认行为是将来自系统消息和debug特权EXEC命令的输出发送至设备中运行的记录流程。
+
+登录流程将登录消息的分发控制在各个目标上（见图6-8），如
++ 记录缓冲区
++ 终端线
++ Syslog服务器
+
+##### Syslog消息格式
+`seq no:timestamp: %facility-severity-MNEMONIC:description`
++ seq no：日志消息的序列号
++ timestamp：消息的日期和时间
++ facility：消息的始发设备（接口、SNMP等）
++ severity：0-7安全代码
++ MNEMONIC：消息的word描述
++ description：定义消息的简短字符串
+
+##### Syslog配置
+使用logging命令确定一台Syslog服务器主机来接收日志记录消息。发送多次会添加一个列表
+
+#### 6.1.4 NetFlow概述
+NetFlow网络流由以下7个关键字段联合定义
++ 源IP地址
++ 目标IP地址
++ 源端口号
++ 目标端口号
++ 第3层协议类型
++ ToS（服务类型，IP标头中用于表示优先级的一个字段）
++ 输入逻辑接口
+
+#### 6.1.5 NetFlow架构
+图6-13以图形方式表示了如何过滤和聚合数据
+
+NetFlow收集器被动地侦听指定的UDP端口来接收和处理导出的NetFlow数据报。
+
+NetFlow消费应用程序（如NetFlow分析器）接收数据并提供方法来执行已记录或已聚合流数据的近实时可视化和分析。
+
+#### 6.1.6 NetFlow配置
+```
+interface G0/1
+	ip flow ingress
+	ip flow egress
+exit
+ip flow-export destination 10.1.10.100 99
+ip flow-export version 9
+```
+
+#### 6.1.7 验证NetFlow操作
+1. `show ip flow interface`用于验证接口上是否已启用NetFlow
+1. `show ip flow export`用于验证NetFlow统计数据导出的状态和统计信息
+1. `show ip cache flow`用于在设备上显示
++ 哪些协议使用的流量最多
++ 流量采用的路径
+
+### 6.2 路由器初始化和配置
+Cisco IOS映像文件包含思科设备运行所必需的Cisco IOS软件。
+设备配置文件包含一组用户定义的配置命令，这些命令可用于自定义思科设备的功能
+
+#### 6.2.1 路由器内部组件概述
+Cisco路由器的主要内部组件包括
++ CPU
++ 接口
++ RAM
++ 闪存
++ NVRAM
+
+##### ROM通常包含3个主要的微代码区域
++ 引导程序
++ 开机自检
++ ROM监控器
+
+##### 路由器通电顺序
+启动步骤
+1. 执行测试
++ 执行POST加载
+1. 查找和加载Cisco IOS软件
++ 加载并运行Bootstrap代码
+1. 查找和加载配置
++ 查找Cisco IOS软件
++ 加载Cisco IOS软件
+1. 运行Cisco IOS软件
++ 查找配置
++ 加载配置
++ 运行配置好的Cisco IOS软件
+
+##### 配置寄存器
+NVRAM中配置寄存器的每一位都会影响下一次重新加载或重新启动时路由器的行为。
+
+可以使用该16位配置寄存器
++ 强制路由器进入ROM监控器
++ 选择一个启动源和默认启动文件名
++ 控制广播地址
++ 忽略启动配置。通常会执行该步骤来恢复丢失的密码
++ 更改控制台线路速度
+
+最低的4位成为启动字段，指定路由器如何查找Cisco IOS映像文件。
+
+主要的配置寄存器值如下
++ 0x2102：正常运行。从闪存中加载Cisco IOS映像并加载默认的启动配置文件
++ 0x2100：输入ROMmon模式
++ 0x2142：从闪存中加载Cisco IOS并忽略启动配置
+
+##### 更改配置寄存器
+`show version`显示的最后一行包含配置寄存器值
+
+可以通过config-register全局配置命令更改默认的配置寄存器设置。
+
+##### 查找Cisco IOS映像以进行加载
+Bootstrap代码负责查找Cisco IOS软件并执行以下步骤
+1. 检查配置寄存器的启动字段
+1. 如果配置寄存器的启动字段值从0x2变为0xF。可按顺序输入几条boot system命令已提供容错启动计划，例如
++ 启动闪存设备中的系统启动映像`boot system flash:c2900-universalk9-mz.SPA.152-4.M1.bin`
++ 将TFTP服务器指定为Cisco IOS映像来源`boot system tftp://c2900-universalk9-mz.SPA.152-4.M1.bin`
+1. 如果配置中没有boot system命令，则路由器默认加载并运行闪存中第一个有效的Cisco IOS映像
+1. 如果闪存中没有有效的Cisco IOS映像，则路由器尝试从网络TFTP服务器启动，并使用Cisco IOS映像文件名的一部分作为启动字段值
+1. 经过6次不成功的查找TFTP服务器的尝试之后，路由器将加载ROMmon
+
+##### 加载Cisco IOS映像文件
+`show version`命令的输出包括以下内容
+1. Cisco IOS版本
+1. ROM Bootstrap程序
++ Cisco IOS映像的位置
+1. 接口
+1. NVRAM的大小
+1. 闪存的大小
+1. 配置寄存器
+
+##### 选择并加载配置
+查找配置文件的流程如图6-19所示
+```
+路由器启动 -> 开始在NVRAM中启动配置？ -> 激活连接到另一台路由器的链路？ -> 弹出初始配置对话
+                        |             不               |
+                        |是                            |是
+                        |                              |
+                  加载启动配置             试图从TFTP服务器加载配置
+
+图6-19 查找配置文件的流程图
+```
+
+#### 6.2.2 Cisco IOS文件系统和设备
+Cisco IFS使用URL约定来制定位于网络设备和网络上的文件
+
+`show filw system`列出可用的文件系统
+
+copy命令可用来从Cisco IFS和网络服务器的不同端点移动文件
+
+#### 6.2.3 管理Cisco IOS映像
+##### 解释Cisco IOS映像文件名
++ `c2900`表示运行映像的平台
++ `universal`制定功能集为通用的单映像集
++ `mz`表示文件从RAM运行并经过压缩
++ `152-4.M1`是版本号
+
+##### 创建Cisco IOS映像备份
+`show flash0:`命令确定Cisco IOS映像文件的大小
+`copy flash0: tftp:`命令将映像复制到TFTP服务器
+
+##### 升级Cisco IOS映像
+执行备份的反过程
+```
+show flash0:
+copy tftp: flash0:
+boot system flash: c2900-universalk9-mz.SPA.152-4.M1.bin
+exit
+copy running-config startup-config
+#将配置寄存器中的启动字段设为0x2~0xF
+#重新加载路由器
+show version
+```
+
+#### 6.2.4 管理设备配置文件
+`copy startup-config running-config`和`copy tftp running-config`会合并配置。不覆盖现有的配置，任何相冲突的命令都将被覆盖，输入新的命令，并且默认状态下的命令仍然保持原样。
+
+#### 6.2.5 Cisco IOS密码恢复
+重启路由器，并在通电后的前30秒内按下Break键来中断启动进程就可以进入ROMmon模式。
+```
+confreg 0x2142
+#交互模式选择no
+en
+copy startup-config running-config
+#进入接口配置模式
+no sh
+#在配置模式下执行
+enable secret newpassword
+config-register 0x2102
+exit
+copy running-config startup-config
+```
+
+### 6.3 Cisco IOS许可
+#### 6.3.1 许可概述
++ 订购路由器时会随附永久许可证
++ 还会随附评估许可证（也称为临时许可证）。如果想试用一个新的软件包或功能，可激活该特定项目的评估许可。如果想永久激活路由器上的软件包或功能，则必须获取新的软件许可证。
++ 需要软件激活的许可证需使用软件申请证明。在许多情况下，思科或您的思科合作伙伴已经激活了在购买时订购的许可证，而不提供任何软件申请证书
+
+#### 6.3.2 Cisco IOS 15之前的Cisco IOS许可和打包
+在Cisco IOS 15.0版之前，团建提供8个软件包（映像）来满足不同服务类别的要求
+
+#### 6.3.3 Cisco IOS 15许可和打包
+```
+DATA    UC    SEC
+   ^    ^     ^
+    \   |    /
+      ipbase
+
+图6-32 Cisco IOS 15打包
+```
+
+`show license udi`显示通用设备标识符（UDI）=PID+“:”+SN
+
+路由器还附带了一个附加在制造厂商的小标志，如图6-34所示
+
+##### 许可证验证
+在特权模式中使用
++ `show license`命令查看有关Cisco IOS软件许可证的信息
++ `reload`命令表示重新启动前的许可证状态
++ `show version`命令表示已安装的许可证类型
+
+##### 永久许可证安装
+`license install flash0:uck9-C2900-SPE150_K9-FHH12250057.xml`
+
+##### 评估许可证安装
+```
+license boot module c2900 technology-package uck9
+#协议选择yes
+reload
+show license
+```
+EvalRightToUse输出表示评估许可证
+
+##### 备份许可证
+`license save flash:all_licenses.lic`
+
+#### 6.3.4 安装永久许可证
+删除永久许可证的两个步骤
+```
+license boot module c3900 technology-package uck9 disable
+copy running-config startup-config
+reload
+license clear uck9
+#选择yes
+conf t
+no license boot module c3900 technology-package uck9 disable
+exit
+```
+##### 重新托管许可证
+
+### 6.4 Cisco IOS-XR、IOS-XE和NX-OS
+IOS15的两种变体
++ Cisco IOS-XR用于CRS
++ Cisco IOS-XE专为Aggregation Service Routers（ASR）1000系列和Catalyst 4500E交换机而设计
+
+Cisco NX-OS是数据中心类交换机的Cisco Nexus系列采用的操作系统。
+
+#### 6.4.1 Cisco IOS-XR
+Cisco IOS-XR及其运行的平台都专为服务提供商而设计。他们需要在其核心中拥有永不丢弃数据包、极少停止服务或耗尽系统资源的设备。Cisco IOS-XR包含以下主要功能
++ 服务中软件升级（ISSU）
++ 仅重载OS部分，而不是重载整个系统
++ 支持内部物理组件冗余
++ 进程之间的内存隔离和保护
++ 冗余硬件组件
++ 支持极高的数据包转发速度
+
+#### 6.4.2 Cisco IOS-XE在Linux内核上处理Cisco IOS 15的实例
+Cisco IOS-XE具有以下3个主要功能
+1. 将控制面板的管理功能与数据包的转发分离开来，从而提供以下支持
++ 使用多核心CPU
++ 更好的可靠性
++ 无中断服务软件升级（ISSU）
+1. Linux基础架构为Cisco提供更高的服务集成
+1. 平台抽象
+
+#### 6.4.3 Cisco NX-OS
+主要包括
+1. 弹性：提供高度安全的持续操作，具体如下
++ 故障检测
++ 错误隔离
++ 自我修复功能
++ 无中断服务软件升级（ISSU）
+1. 虚拟化
+1. 效率
+1. 可扩展性
+
+## 复习题
+(ABD)DHABCDACD
+ABAB(AD)(AC)ACCC
+(AC)(BC)(ABCD)
+## 错题
+2. 对于用`snmp-server community Cisco RO`配置的设备，NMS只能将获取的结果绘制成图，NMS不能更改路由器的主机名

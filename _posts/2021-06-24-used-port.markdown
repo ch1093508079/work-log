@@ -1,0 +1,34 @@
+---
+layout: post
+title:  "端口号专项笔记"
+date:   2021-06-23 10:00:00 +0800
+categories: foxconn
+---
+
+
+
+22 ：sftp、ssh
+
+### 123 UDP ：时间同步Network Time Protocol(NTP)
+
+### 138、139 ：UDP管控域需主管确认
+
+### 161 朱武做的是UDP ：SNMP基于UDP
+
+### 389 问是否为UDP，朱武做的是TCP，离职榜样做的是UDP ：LDAP轻型目录访问协议和NetMeeting Internet Locator Server共用这一端口。服务器上的389端口用于LDAP（http://zh.wikipedia.org/wiki/LDAP），使用TCP和UDP协议。当客户端访问服务器的LDAP服务时，首先使用TCP协议连接服务器的389端口，如果失败则转用UDP。
+
+464 炜哥说一般是tcp，朱武做的是IP ：Kerberos k密码服务
+
+### 513 离职榜样做的是UDP ：Login,remote login ，是从使用cable modem或DSL登陆到子网中的UNIX计算机发出的广播。
+
+### 514 离职榜样做的是UDP ：用于将日志和事件发送到日志服务器的标准化协议
+
+636 ：带ssh的LDAP轻型目录访问协议
+
+### 902、903 离职榜样TCP和UDP：VMware
+
+4000 ：QQ客户端
+
+5900 ：远程控制软件VNC
+
+10050、10051 ：zabbix

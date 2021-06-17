@@ -1,0 +1,20 @@
+---
+layout: post
+title:  "《CCNA-ICDN1》读书笔记"
+date:   2021-06-14 11:25:00 +0800
+categories: book-note
+---
+
+# ch23 高级IPv4 ACL和设备安全
+
+### 23.1 小测试
+df ae e a 
+
+### 23.2 基础内容
+#### 23.2.2 命名ACL和ACL编辑
+##### 使用序列号编辑ACL
+默认序号为10，20，30…
+
+用no 20删除20
+
+用5 deny……插入
