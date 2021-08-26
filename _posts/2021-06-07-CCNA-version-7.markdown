@@ -162,6 +162,7 @@ sh users
 1. 建立主机表
 一个主机名最多指派8个IP地址。使用`ip host 主机名 tcp端口号 IP地址`建立主机表仅供本路由器提供名称解析
 2. 使用DNS解析名称
+
 ```
 conf t
 ip domain-lookup

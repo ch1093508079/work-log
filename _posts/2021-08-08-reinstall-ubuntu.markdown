@@ -7,9 +7,11 @@ categories: jekyll update
 
 ## [Ubuntu16.04系统安装后的10件真正必做之事。](https://www.cnblogs.com/fnight/p/5722016.html)总结如下：
 ```shell
-sudo echo
+sudo echo 获取临时sudo免密权限
 cd /usr/local/
+sudo rm games
 sudo ln -s ~/文档/dot-file/bin games
+cd ~
 # 使用本地时区可避免与windows时间错乱
 timedatectl set-local-rtc 1
 sudo apt-get update
@@ -24,8 +26,8 @@ ssh-keygen -t rsa -C "you@example.com"
 
 
 
-# 设置时按3次回车，即可免密push
-cat .ssh/id_rsa.pub
+# 按3次回车
+cat ~/.ssh/id_rsa.pub
 # 需手动把公钥放上github或gitee
 ssh -T git@gitee.com
 yes
@@ -35,19 +37,20 @@ yes
 
 cygwin\home\username\.bashrc
 
-```zsh
-# 让ls和dir命令显示中文和颜色
+```shell
+# 让ls和dir命令显示颜色
 alias ls='ls --show-control-chars --color'
 alias dir='dir -N --color'
-# 设置为中文环境，使提示成为中文
-export LANG="zh_CN.GBK"
-# 输出为中文编码
-export OUTPUT_CHARSET="GBK"
+export LANG="zh_CN.UTF-8"
+## 设置为中文环境，使提示成为中文
+#export LANG="zh_CN.GBK"
+## 输出为中文编码
+#export OUTPUT_CHARSET="GBK"
 ```
 
 cygwin\home\username\.inputrc
 
-```bash
+```shell
 # 可以输入中文 
 set meta-flag on
 set output-meta on
