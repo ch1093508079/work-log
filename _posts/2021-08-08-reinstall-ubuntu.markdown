@@ -58,3 +58,5 @@ set convert-meta off
 # 忽略大小写
 set completion-ignore-case on
 ```
+
+安装bash-complete
