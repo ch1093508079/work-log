@@ -8,6 +8,10 @@ categories: jekyll update
 
 # 电脑硬件层面的运维
 
+## [按电源键没反应怎么排查故障检修思路](https://www.bilibili.com/video/BV1ig411V7ip?spm_id_from=333.1007.top_right_bar_window_view_later.content.click)
+所有电源都有触发线，就是绿线。
+用万用表查电源
+
 ## [以前是这样"修电脑"的](https://www.bilibili.com/video/BV11q4y1Z7mp?spm_id_from=333.999.0.0)
 1. 键盘不能切换大小写，大概率是内存的问题：重新插拔内存，做清洁
 1. 重新插拔主板的电池
@@ -264,7 +268,6 @@ interface range Ten-Gigabitthernet 2/0/47 to Ten-Gigabitthernet 2/0/48
 disp irf
 ```
 
-## [dhcp]()
 ## []()
 
 # 专门抠图的应用
