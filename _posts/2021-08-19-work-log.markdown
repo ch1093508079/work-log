@@ -137,6 +137,7 @@ categories: jekyll update
 # 2021年9月16日
 
 ## 办公需要的的IT用品备忘
+1. 笔记本电源适配器
 1. [5米电话线](https://item.jd.com/100007424293.html)
 1. [硅脂](https://item.jd.com/100023485368.html#crumb-wrap)
 1. [硬盘底座，可开发票](https://item.jd.com/10036824725941.html)
@@ -192,7 +193,7 @@ PCBJ121631
 
 ## 疑问
 1. WinNTSetup有时不行
-
+1. 宽带的拨号账号和接入号
 
 
 
