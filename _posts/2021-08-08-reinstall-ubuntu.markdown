@@ -5,11 +5,29 @@ date:   2021-08-08 15:50:28 +0800
 categories: jekyll update
 ---
 
+## 不改变/home重装优麒麟后要做
+```
+sudo echo 获取临时sudo免密权限
+cd /usr/local/
+sudo rm -r games
+sudo ln -s ~/文档/dot-file/bin games
+cd ~
+ssh-keygen -t rsa -C "you@example.com"
+
+
+
+# 按3次回车
+cat ~/.ssh/id_rsa.pub
+# 需手动把公钥放上github或gitee
+ssh -T git@gitee.com
+yes
+```
+
 ## [Ubuntu16.04系统安装后的10件真正必做之事。](https://www.cnblogs.com/fnight/p/5722016.html)总结如下：
 ```shell
 sudo echo 获取临时sudo免密权限
 cd /usr/local/
-sudo rm games
+sudo rm -r games
 sudo ln -s ~/文档/dot-file/bin games
 cd ~
 # 使用本地时区可避免与windows时间错乱

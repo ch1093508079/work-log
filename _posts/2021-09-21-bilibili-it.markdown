@@ -79,6 +79,7 @@ categories: jekyll update
 + [秋刀鱼半藏显卡天梯图网址](https://tieba.baidu.com/p/6133450546?see_lz=1#135699450528l)
 + [秋刀鱼半藏cpu天梯图网址](https://tieba.baidu.com/p/5005825360)
 + [FCPPOWERUP极电魔方网址](https://www.fcpowerup.com/)
+
 ### 显卡
 1. NVIDIA公卡供应慢
 + 每1~2年都会推出新的显卡核心
