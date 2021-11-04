@@ -6,50 +6,43 @@ categories: jekyll update
 ---
 
 ## 不改变/home重装优麒麟后要做
-```
-sudo echo 获取临时sudo免密权限
-cd /usr/local/
-sudo rm -r games
-sudo ln -s ~/文档/dot-file/bin games
-cd ~
-ssh-keygen -t rsa -C "you@example.com"
+```shell
+ssh-keygen -t ed25519 -C "Lenvo2022Jan"
+
 
 
 
 # 按3次回车
-cat ~/.ssh/id_rsa.pub
+cat ~/.ssh/id_ed25519.pub
 # 需手动把公钥放上github或gitee
-ssh -T git@gitee.com
+# ssh -T git@gitee.com
+ssh -T git@github.com
 yes
-```
+# 输出 "... GitHub does not provide shell access." 是正常的，错误输出是：
+# Agent admitted failure to sign using the key.
+# debug1: No more authentication methods to try.
+# Permission denied (publickey).
 
-## [Ubuntu16.04系统安装后的10件真正必做之事。](https://www.cnblogs.com/fnight/p/5722016.html)总结如下：
-```shell
 sudo echo 获取临时sudo免密权限
+
+cd ~/文档/
+git clone git@gitee.com:ubuntubackup/dot-file.git
 cd /usr/local/
 sudo rm -r games
 sudo ln -s ~/文档/dot-file/bin games
 cd ~
-# 使用本地时区可避免与windows时间错乱
-timedatectl set-local-rtc 1
-sudo apt-get update
-sudo apt-get -y install vim
-sudo apt-get -y install git
+
 git config --global core.editor vim
 git config --global core.quotepath false
 git config --global alias.goa 'log --graph --pretty=oneline --abbrev-commit'
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
-ssh-keygen -t rsa -C "you@example.com"
 
-
-
-# 按3次回车
-cat ~/.ssh/id_rsa.pub
-# 需手动把公钥放上github或gitee
-ssh -T git@gitee.com
-yes
+# 使用本地时区可避免与windows时间错乱
+timedatectl set-local-rtc 1
 ```
+
+### 参考：[Ubuntu16.04系统安装后的10件真正必做之事。](https://www.cnblogs.com/fnight/p/5722016.html)总结如下：
 
 ## [Cygwin中文配置](http://www.cygwin.cn/site/info/show.php?IID=1005)
 
