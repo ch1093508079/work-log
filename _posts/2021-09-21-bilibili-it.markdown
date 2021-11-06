@@ -164,6 +164,9 @@ categories: jekyll update
 1. 硬盘位数量
 1. 机箱是否闷罐
 
+## [散热硅脂选购涂抹指南](https://www.bilibili.com/video/BV1CQ4y1i7EK)
+1. 视频1:04。除了利民和信越外，绝大多数硅脂采用画叉或九点法都能自行铺开。利民散热器附赠的TF7就很不错
+
 ## [买不起NAS，一百元解决存储问题，SSK硬盘底座开箱](https://www.bilibili.com/medialist/play/ml1350003812/BV1uq4y1S7y7)
 评论区：
 1. 这种商品的定位应该是利用废旧机械硬盘。或者给设备做冷备的。长期运行着不靠谱，散热应该hold不住
@@ -271,6 +274,12 @@ disp irf
 
 ## []()
 
-# 专门抠图的应用
+# 影视听处理
 ## [绝对好用的免费抠图网站，确定不试一试？](https://www.bilibili.com/medialist/play/ml1338075412/BV1ey4y1G7Bp)
-## []()
+## [在线录屏好用吗](https://www.bilibili.com/video/BV1844y1v7b6)
+
+# 其他
+1. 淘宝种类多，京东售后好但都加到价格上了，拼多多省了服务
+1. 合规轮胎每月漏气0.7bar
+1. 高德地图适合小路，但要小心它导你去帮忙探小路
+1. 国内芯片价格高，树莓派约贵1倍
