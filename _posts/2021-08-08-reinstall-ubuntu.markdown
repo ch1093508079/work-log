@@ -40,6 +40,10 @@ git config --global user.email "you@example.com"
 
 # 使用本地时区可避免与windows时间错乱
 timedatectl set-local-rtc 1
+
+sudo apt -y update 
+sudo apt -y install python3-pip
+pip3 install bs4
 ```
 
 ### 参考：[Ubuntu16.04系统安装后的10件真正必做之事。](https://www.cnblogs.com/fnight/p/5722016.html)总结如下：
