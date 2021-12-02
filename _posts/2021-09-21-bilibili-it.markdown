@@ -8,6 +8,13 @@ categories: jekyll update
 
 # 电脑硬件层面的运维
 
+## [NAS 用什么硬盘](https://www.bilibili.com/medialist/play/watchlater/BV1C44y1Y74K)
+1. 西数红盘（CMR硬盘，不是垂直盘）
+	+ PLUS：100万小时的MTBF三年质保
+	+ PRO：100万小时，5年质保
+1. 希捷，支持多盘位RAID优化，在震动时可快速恢复
+	+ Exos X 氦气全密封
+
 ## [按电源键没反应怎么排查故障检修思路](https://www.bilibili.com/video/BV1ig411V7ip?spm_id_from=333.1007.top_right_bar_window_view_later.content.click)
 所有电源都有触发线，就是绿线。
 用万用表查电源
@@ -277,8 +284,18 @@ disp irf
 # 影视听处理
 ## [绝对好用的免费抠图网站，确定不试一试？](https://www.bilibili.com/medialist/play/ml1338075412/BV1ey4y1G7Bp)
 ## [在线录屏好用吗](https://www.bilibili.com/video/BV1844y1v7b6)
+## [2GB的视频压缩到80Mb？HandBrake最好用的免费视频压缩Win&Mac&Linux](https://www.bilibili.com/medialist/play/watchlater/BV1KL4y1q7zj)
+## [【一键变清晰！】rick配音，超实用的位图转矢量图工具！](https://www.bilibili.com/medialist/play/watchlater/BV1jU4y1T7KB)
+## [ffmpeg基础奠基](https://www.bilibili.com/medialist/play/watchlater/BV1EQ4y1S7KP)
+1. ffprobe用于查看格式
+1. 查看支持的编码器和解码器：`ffmpeg -encoders`和`ffmpeg -decoders`
+1. `ffmpeg -h encoder=名称`查看编码器支持的参数和选项
+1. 转码命令格式：`ffmpeg -i INPUT -c:v ENCODER OPTIONS -c:a ENCODER OPTIONS OUTPUT`。常用的如下
++ ffmpeg -i FLAWER.flv -c:c libx264 -c:a acc OUT.mp4
++ 未完，看到2:40
 
 # 其他
+1. 车子本身不具备检测机油寿命和品质的功能，保养提示是一个三角形的警告；如果是红色的阿拉丁神灯，那就要非常谨慎
 1. 165HZ和60HZ显示器刷新率对比：没有好显卡就没必要超60Hz
 1. 淘宝种类多，京东售后好但都加到价格上了，拼多多省了服务
 1. 合规轮胎每月漏气0.7bar
