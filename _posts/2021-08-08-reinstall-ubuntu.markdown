@@ -42,6 +42,7 @@ git config --global user.email "you@example.com"
 timedatectl set-local-rtc 1
 
 sudo apt -y update 
+sudo apt install davfs2
 sudo apt -y install python3-pip
 pip3 install bs4
 ```
