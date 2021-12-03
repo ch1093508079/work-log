@@ -286,6 +286,9 @@ disp irf
 ## [在线录屏好用吗](https://www.bilibili.com/video/BV1844y1v7b6)
 ## [2GB的视频压缩到80Mb？HandBrake最好用的免费视频压缩Win&Mac&Linux](https://www.bilibili.com/medialist/play/watchlater/BV1KL4y1q7zj)
 ## [【一键变清晰！】rick配音，超实用的位图转矢量图工具！](https://www.bilibili.com/medialist/play/watchlater/BV1jU4y1T7KB)
+## [m3u8下载网页视频，直接保存为mp4](https://www.bilibili.com/medialist/play/watchlater/BV1Tf4y1M7oz)
+1. IDM下载网页视频有切片
+1. ffmpeg下载m3u8链接后会自动合成
 ## [ffmpeg基础奠基](https://www.bilibili.com/medialist/play/watchlater/BV1EQ4y1S7KP)
 1. ffprobe用于查看格式
 1. 查看支持的编码器和解码器：`ffmpeg -encoders`和`ffmpeg -decoders`
@@ -295,6 +298,7 @@ disp irf
 + 未完，看到2:40
 
 # 其他
+1. win10的连接与否是通过ping一个特定服务器来判断的，但是在国内复杂网络环境+微软那神器服务器系统下，这个服务器不是总能ping到，但是不代表没网
 1. 车子本身不具备检测机油寿命和品质的功能，保养提示是一个三角形的警告；如果是红色的阿拉丁神灯，那就要非常谨慎
 1. 165HZ和60HZ显示器刷新率对比：没有好显卡就没必要超60Hz
 1. 淘宝种类多，京东售后好但都加到价格上了，拼多多省了服务
