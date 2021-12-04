@@ -192,6 +192,12 @@ categories: jekyll update
 1. 常见的消费级主板，只能连接6块SATA硬盘，同时启动的峰值电流也不过12V15A、5V3A，也就是接近200W，配个300W的电源已经够用。4盘位的蜗牛大军也不必担心250W的FLEX或小1U电源功率不足
 1. 挂在SAS控制器上的硬盘，会受控制排队起转，每2秒一个避免扎堆。SAS自检+24块硬盘启动就要1分钟。
 
+## [紫盘、监控盘究竟能不能放在普通电脑和NAS上当做普通数据盘使用？](https://www.bilibili.com/medialist/play/watchlater/BV1944y1h77r)
+1. 紫盘不是没有纠错功能，而是多了一个“可选择关闭纠错功能”的功能
+1. 紫盘的设计通电时间是7×24小时，而蓝盘是5×8小时
+1. 紫盘一般采用传统CMR磁记录方式
+1. 紫盘价格便宜，预算充足还是推荐NAS专用盘
+
 # 软件与操作系统层面的运维
 ## [如何用Dism++删除Windows预装软件](https://www.bilibili.com/medialist/play/ml1338075412/BV1r3411q71B)
 
@@ -228,6 +234,14 @@ C盘清理工具-清理君Lite：可视化展示C盘空间布局
 
 ## [带USB路由器启动NAS](https://www.bilibili.com/video/BV1Ug411c7eJ)
 进入管理页面->工具箱->路由存储
+
+## [这个浏览器竟然可以做....](https://www.bilibili.com/medialist/play/watchlater/BV1mP4y1V7LC)
+1. 网页禁止复制，在地址栏前加read:解决
+1. 阅读模式听书
+1. 数学求解器
+1. 右键搜索：在右侧栏显示搜索结果
+1. 集锦：用于做笔记
+1. 把网站作为应用安装到任务栏中
 
 # 网络设备
 
@@ -282,6 +296,8 @@ disp irf
 ## []()
 
 # 影视听处理
+## (用浏览器的右键检查功能下载视频](https://www.bilibili.com/medialist/play/watchlater/BV1sF411a7xF)
+`右键检查->network->media->刷新->open in new tab`
 ## [绝对好用的免费抠图网站，确定不试一试？](https://www.bilibili.com/medialist/play/ml1338075412/BV1ey4y1G7Bp)
 ## [在线录屏好用吗](https://www.bilibili.com/video/BV1844y1v7b6)
 ## [2GB的视频压缩到80Mb？HandBrake最好用的免费视频压缩Win&Mac&Linux](https://www.bilibili.com/medialist/play/watchlater/BV1KL4y1q7zj)
@@ -296,6 +312,7 @@ disp irf
 1. 转码命令格式：`ffmpeg -i INPUT -c:v ENCODER OPTIONS -c:a ENCODER OPTIONS OUTPUT`。常用的如下
 + ffmpeg -i FLAWER.flv -c:c libx264 -c:a acc OUT.mp4
 + 未完，看到2:40
+## [在 Linux 上安装 GIMP Resynthesizer 插件 | 从照片中删除不需要的对象](https://www.bilibili.com/medialist/play/ml125662012/BV1Zg411P7Fr?oid=506783891&otype=2)
 
 # 其他
 1. win10的连接与否是通过ping一个特定服务器来判断的，但是在国内复杂网络环境+微软那神器服务器系统下，这个服务器不是总能ping到，但是不代表没网
@@ -305,6 +322,7 @@ disp irf
 1. 合规轮胎每月漏气0.7bar
 1. 高德地图适合小路，但要小心它导你去帮忙探小路
 1. 国内芯片价格高，树莓派约贵1倍
+1. [edge发布 for Linux正试版安装](https://www.bilibili.com/medialist/play/watchlater/BV15h41187SF)
 1. 省流：
 + 一般人达不到蓝光损害眼睛程度
 + 市面上的电子产品基本过滤蓝光
