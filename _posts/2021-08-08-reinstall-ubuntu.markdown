@@ -16,6 +16,7 @@ ssh-keygen -t ed25519 -C "Lenvo2022Jan"
 cat ~/.ssh/id_ed25519.pub
 # 需手动把公钥放上github或gitee
 ssh -T git@gitee.com
+yes
 ```
 
 ## 不改变/home重装ubuntu后要做
@@ -29,6 +30,12 @@ yes
 
 sudo echo 获取临时sudo免密权限
 
+sudo apt -y update 
+sudo apt -y install vim git
+sudo apt -y install ffmpeg davfs2
+sudo apt -y install python3-pip
+pip3 install bs4
+
 cd ~/文档/
 git clone git@gitee.com:ubuntubackup/dot-file.git
 cd /usr/local/
@@ -36,15 +43,9 @@ sudo rm -r games
 sudo ln -s ~/文档/dot-file/bin games
 cd ~
 
-sudo apt -y update 
-sudo apt -y install git vim
-sudo apt -y install davfs2
-sudo apt -y install python3-pip
-pip3 install bs4
-
 git config --global core.editor vim
 git config --global core.quotepath false
-git config --global alias.goa 'log --graph --pretty=oneline --abbrev-commit'
+git config --global alias.goa 'log --graph --pretty=oneline --abbrev-commit HEAD~20..HEAD'
 git config --global user.name "Your Name"
 git config --global user.email "you@example.com"
 
