@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "《linux-shell》读书笔记"
-date:   2021-06-14 11:25:00 +0800
+date:   2021-06-12 11:25:00 +0800
 categories: book-note
 ---
 
