@@ -37,6 +37,10 @@ CAPWAP基于UDP
 1. ESS：由多个使用相同SSID的BSS组成
 1. WLAN漫游：指STA在同属一个ESS的不同AP的覆盖范围之间移动且保持用户业务不中断的行为。
 
+P660
+
+
+
 以上为HCIA-Datacom V1.0 培训教材
 ---
 以下为《CCNA-ICDN1》读书笔记
