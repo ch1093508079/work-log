@@ -7,14 +7,23 @@ categories: jekyll update
 
 ## 12月26日提醒何工做以下配置
 1. 先配置好好：防火墙、行为管理、核心交换机、弱电间网络交换机
++ ：
 1. 把没上线的AP上线
++ ：
 1. wifi让登记了mac地址的设备能直接上网，没登记的设备要用ad域账号认证
++ ：
 1. 所有设备的ssh、telnet、web管理方式
++ ：
 1. 所有SNMP，详见微信
++ ：
 1. dhcp snooping
++ ：
 1. 配置DMZ区域的一个DEMO
-8. 关闭各光猫发射出的wifi
++ ：
+1. 关闭各光猫发射出的wifi
++ ：
 1. 所有设备中多余的vlan 244去掉
++ ：
 
 ## 12月26日咨询何工关于三台POE交换机
 1. 为啥二楼的POE交换机的vlan batch比一、三楼多了一个2？且三台都多了244
@@ -31,6 +40,7 @@ vty 0 4
  authentication-mode aaa
  protocol inbound all
 ```
++ ：
 1. 为啥**三楼**的POE交换机的以下配置与一、二楼差别那么大？
 + !Software Version与一楼、二楼不同
 + ：
@@ -39,11 +49,16 @@ vty 0 4
 + g0/0/13 to g0/0/20 都配了access199，而一、二楼没有
 + ：
 + g0/0/23 to g0/0/28 与一、二楼不同
-	+ g0/0/23没配
-	+ g0/0/24 to g0/0/28 少了undo port trunk allow-p vlan 1
+	1. g0/0/23没配
+	1. g0/0/24 to g0/0/28 少了undo port trunk allow-p vlan 1
 + ：
 + 一、二楼没有ssh server publickey
-+ ：
+
+1. ：
+1. ：
+1. ：
+1. ：
+1. ：
 
 ## 12月26日咨询何工关于两台CORE
 1. core-199.254比252多了vlan batch 2 to 7 9
